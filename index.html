@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Live News Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div class="header-div">
+        <h1>Live News Feed</h1>
+        <h3>By AANTAR PANTAR</h3>
+        
+       
+        <div class="filter-box">
+            <input type="text" id="mySearchInput" placeholder="Type keyword (e.g., apple, space)...">
+            <button id="mySearchBtn">Search Now</button>
+
+            <select id="myCategoryDropdown">
+                <option value="general">General</option>
+                <option value="technology">Technology</option>
+                <option value="business">Business</option>
+                <option value="sports">Sports</option>
+                <option value="science">Science</option>
+            </select>
+        </div>
+    </div>
+
+    
+    <div id="loadingSpinner" class="spinner hide-me">Loading fresh news articles...</div>
+
+    
+    <div id="errorText" class="error-msg hide-me"></div>
+
+    
+    <div id="newsDiv"></div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
