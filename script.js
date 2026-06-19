@@ -94,6 +94,7 @@ async function getNewsData(categoryValue, searchKeyword) {
             
             newsDiv.appendChild(cardDiv);
         }
+        
 
     } catch (err) {
         console.log(err);
@@ -105,3 +106,21 @@ async function getNewsData(categoryValue, searchKeyword) {
 
     loadingSpinner.classList.add('hide-me');
 }
+
+
+mySearchBtn.addEventListener('click', function() {
+    const userKeyword = mySearchInput.value.trim();
+    const selectedCat = myCategoryDropdown.value;
+    getNewsData(selectedCat, userKeyword);
+});
+
+
+myCategoryDropdown.addEventListener('change', function() {
+    const userKeyword = mySearchInput.value.trim();
+    const selectedCat = myCategoryDropdown.value;
+    getNewsData(selectedCat, userKeyword);
+});
+
+
+
+getNewsData("general", "");
